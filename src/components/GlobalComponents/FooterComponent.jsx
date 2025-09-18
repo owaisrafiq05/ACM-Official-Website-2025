@@ -9,7 +9,15 @@ const FooterComponent = () => {
   ];
 
   const developers = [
-    { name: "Owais Rafiq", link: "https://www.linkedin.com/in/owais-rafiq-639494253/" },
+    { name: "Arham Alvi", link: "https://www.linkedin.com/in/owais-rafiq-639494253/" },
+    { name: "Owais Rafiq", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
+    { name: "Shareeq Rashid", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
+  ];
+
+  const designers = [
+    { name: "Hasan Sami" },
+    { name: "Sameed Jamal" },
+    { name: "Asjad Rehan" },
   ];
 
   const socialLinks = [
@@ -37,27 +45,40 @@ const FooterComponent = () => {
                 <img className="mx-auto md:mx-0" src={Logo} width={"250vw"} alt="Logo" />
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-5 sm:gap-6 sm:grid-cols-3 mt-9 mr-9">
-              <div>
-                <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Our Events</h2>
-                <ul className="text-gray-600 font-medium text-lg">
-                  {renderList(events)}
-                </ul>
+            <div className="mt-9 mr-9">
+              {/* Top Row - Events and Socials */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Our Events</h2>
+                  <ul className="text-gray-600 font-medium text-lg">
+                    {renderList(events)}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Connect with Us</h2>
+                  <div className="flex flex-wrap mt-4 items-left justify-left">
+                    {socialLinks.map((social, index) => (
+                      <a key={index} href={social.link} className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl hover:text-gray-600 transition-colors">
+                        {social.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div>
-                <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Meet the Developers</h2>
-                <ul className="text-gray-600 font-medium text-lg">
-                  {renderList(developers)}
-                </ul>
-              </div>
-              <div>
-                <h2 className="text-lg font-bold text-[#031e2c] uppercase sm:ml-4">Connect with Us</h2>
-                <div className="flex flex-wrap mt-4 items-left justify-left">
-                  {socialLinks.map((social, index) => (
-                    <a key={index} href={social.link} className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl hover:text-gray-600 transition-colors">
-                      {social.name}
-                    </a>
-                  ))}
+
+              {/* Bottom Row - Developers and Designers */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Meet the Developers</h2>
+                  <ul className="text-gray-600 font-medium text-lg">
+                    {renderList(developers)}
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Meet the Designers</h2>
+                  <ul className="text-gray-600 font-medium text-lg">
+                    {renderList(designers)}
+                  </ul>
                 </div>
               </div>
             </div>
@@ -65,7 +86,7 @@ const FooterComponent = () => {
           <div className="border border-gray-300 h-0.5 mt-8 mb-3"></div>
           <h2 className="text-sm text-center text-gray-600">
             © {new Date().getFullYear()}{" "}
-              ACM NUCES™
+            ACM NUCES™
             . All Rights Reserved.
           </h2>
         </div>

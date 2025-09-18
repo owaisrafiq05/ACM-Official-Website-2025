@@ -11,7 +11,7 @@ const Container = styled.div`
   height: 100vh; /* Full screen height to allow vertical centering */
   display: flex; /* Flexbox to align content */
   align-items: center; /* Vertically center the content */
-  @media (max-width: 640px) { /* Tailwind sm breakpoint */
+  @media (max-width: 1024px) { /* Tailwind lg breakpoint */
     display: none; /* Hide on small screens */
   }
 `;

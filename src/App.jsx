@@ -29,7 +29,7 @@ function App() {
           <>
             <NavBarComponent />
             <div className="flex justify-center items-center w-[100%] mx-auto">
-              <Navbar2/>
+              <Navbar2 />
             </div>
             <div className="flex-grow">
               <Routes>
