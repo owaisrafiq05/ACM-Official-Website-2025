@@ -57,7 +57,7 @@ const ExecutiveCommittee = () => {
         <div className="flex justify-center text-center">
           <div className="sm:max-w-lg">
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl text-[#006984] font-extrabold mb-2 md:mb-8"
+              className="text-3xl md:text-4xl lg:text-5xl text-[#0B466D] font-extrabold mb-2 md:mb-8"
               variants={headingVariants}
               initial="hidden"
               animate="visible"

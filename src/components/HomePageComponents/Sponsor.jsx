@@ -71,7 +71,7 @@ const Sponsor = () => {
           }
         `}
       </style>
-      <h2 className='text-4xl md:text-6xl text-[#006984] font-bold mt-5 mb-5 text-center'>
+      <h2 className='text-4xl md:text-6xl text-[#0B466D] font-bold mt-5 mb-5 text-center'>
         Our Sponsors
       </h2>
       <div style={scrollContainerStyle}>

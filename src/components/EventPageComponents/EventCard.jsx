@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Desktop Component (1024px and above)
-const CodersCupCardDesktop = ({ title, logo, description, date, image, venue, venueSubtitle, attendees, side }) => {
+const EventCardDesktop = ({ title, logo, description, date, image, venue, venueSubtitle, attendees, side }) => {
     return (
         <motion.div
             className="container mx-auto px-16 2xl:px-[6rem] py-10 mb-[4rem] xl:mb-[8rem]"
@@ -95,10 +95,10 @@ const CodersCupCardDesktop = ({ title, logo, description, date, image, venue, ve
 };
 
 // Mobile/Tablet Component (below 1024px)
-const CodersCupCardMobile = ({ title, logo, description, date, image, venue, venueSubtitle, attendees }) => {
+const EventCardMobile = ({ title, logo, description, date, image, venue, venueSubtitle, attendees }) => {
     return (
         <motion.div
-            className="container mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8"
+            className="container mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 mb-12"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -192,7 +192,7 @@ const CodersCupCardMobile = ({ title, logo, description, date, image, venue, ven
 };
 
 // Main Component with Conditional Rendering
-const CodersCupCard = ({
+const EventCard = ({
     title = "Coders Cup 2025",
     logo = "",
     description = "The Coders' Cup is an intra-FAST programming competition that stands as the epitome of where rising minds polish and develop their coding abilities while debugging their very own creations.",
@@ -207,7 +207,7 @@ const CodersCupCard = ({
         <>
             {/* Desktop Version - Hidden on screens smaller than 1024px */}
             <div className="hidden lg:block">
-                <CodersCupCardDesktop
+                <EventCardDesktop
                     title={title}
                     logo={logo}
                     description={description}
@@ -222,7 +222,7 @@ const CodersCupCard = ({
 
             {/* Mobile/Tablet Version - Hidden on screens 1024px and larger */}
             <div className="block lg:hidden">
-                <CodersCupCardMobile
+                <EventCardMobile
                     title={title}
                     logo={logo}
                     description={description}
@@ -237,4 +237,4 @@ const CodersCupCard = ({
     );
 };
 
-export default CodersCupCard;
+export default EventCard;

@@ -31,7 +31,7 @@ const FacultyCard = ({ faculty }) => {
 
       {/* Faculty Details */}
       <div className="text-center">
-        <h2 className="text-lg font-bold text-[#0b466d] truncate">{faculty.name}</h2>
+        <h2 className="text-lg font-bold text-[#0B466D] truncate">{faculty.name}</h2>
         <p className="text-md text-gray-600">{faculty.designation}</p>
       </div>
     </motion.div>

@@ -1,23 +1,26 @@
 import React from 'react';
 import ParallaxSection from "../components/EventPageComponents/ParallaxSection";
 import UpcomingEvents from "../components/EventPageComponents/UpcomingEvents";
-import CodersCupCard from '../components/EventPageComponents/CodersCupCard';
+import EventCard from '../components/EventPageComponents/EventCard';
 import ThroughTheYearsCarousel from '../components/EventPageComponents/ThroughTheYearsCarousel';
 import CodersCupImage from '../assets/images/events/CodersCupBg.jpg';
 import CodersCupLogo from '../assets/images/events/CodersCupLogo.png';
+import Devday from '../assets/devdayimg.jpg';
+import Workshop from '../assets/workshopimg.jpg';
+import BGimg from '../assets/background-image.jpg';
 import { motion } from 'framer-motion';
 
 export function Events() {
   // Sample images for the carousel - replace with your actual event images
   const carouselImages = [
-    CodersCupImage, CodersCupImage,CodersCupImage,CodersCupImage,CodersCupImage, CodersCupImage,CodersCupImage,CodersCupImage,CodersCupImage,CodersCupImage,
+    BGimg, CodersCupImage,Workshop,Devday, BGimg, CodersCupImage,Workshop,Devday
     // Add more images here as needed
     // "/path/to/image2.jpg",
     // "/path/to/image3.jpg",
   ];
 
   return (
-    <div className='mt-24 lg:pl-20'>
+    <div className='mt-12 lg:pl-20'>
 
       
      <motion.h2
@@ -33,7 +36,7 @@ export function Events() {
             transition={{ delay: 0.5, duration: 0.5 }}
           ></motion.span>
         </motion.h2>
-      <CodersCupCard
+      <EventCard
         side='left'
         title="Coders Cup 2025"
         logo={CodersCupLogo}
@@ -44,13 +47,13 @@ export function Events() {
         venueSubtitle="Karachi Campus"
         attendees="5000+"
       />
-      <CodersCupCard
+      <EventCard
         side='right'
         title="Sessions & Workshops"
         logo={``}
         description="Interactive sessions and workshops designed to spark creativity and foster collaboration. Join industry experts and peers to gain insights that will fuel your journey in technology and innovation."
         date="Weekly Sessions"
-        image={CodersCupImage}
+        image={Workshop}
         venue="Auditorium"
         venueSubtitle="Karachi Campus"
         attendees="250+"

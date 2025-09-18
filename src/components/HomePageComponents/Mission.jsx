@@ -16,7 +16,7 @@ export function Mission() {
         <AnimatePresence>
           {isHovered && (
             <motion.span
-              className="absolute inset-0 h-full w-full bg-[#095280] rounded-3xl"
+              className="absolute inset-0 h-full w-full bg-[#0B466D] rounded-3xl"
               layoutId="hoverBackground"
               initial={{ opacity: 0 }}
               animate={{

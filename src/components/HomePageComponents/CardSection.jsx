@@ -39,7 +39,7 @@ const cardData = [
 export function CardSection() {
   return (
     <section className="bg-white py-12 mx-auto sm:ml-20">
-      <h1 className="mainh1 font-extrabold text-4xl text-center lg:text-left lg:text-7xl text-[#006984]">
+      <h1 className="mainh1 font-extrabold text-4xl text-center lg:text-left lg:text-7xl text-[#0B466D]">
         Our Excellence
       </h1>
       {/* Grid Layout for Cards */}
