@@ -9,8 +9,8 @@ const FooterComponent = () => {
   ];
 
   const developers = [
-    { name: "Arham Alvi", link: "https://www.linkedin.com/in/owais-rafiq-639494253/" },
-    { name: "Owais Rafiq", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
+    { name: "Arham Alvi", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
+    { name: "Owais Rafiq", link: "https://www.linkedin.com/in/owais-rafiq-639494253/ " },
     { name: "Shareeq Rashid", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
   ];
 

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const EventCardDesktop = ({ title, logo, description, date, image, venue, venueSubtitle, attendees, side }) => {
     return (
         <motion.div
-            className="container mx-auto px-16 2xl:px-[6rem] py-10 mb-[4rem] xl:mb-[8rem]"
+            className="container mx-auto px-8 lg:px-16 2xl:px-[6rem] py-32 mb-[4rem] xl:mb-[2rem] overflow-hidden"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -46,7 +46,7 @@ const EventCardDesktop = ({ title, logo, description, date, image, venue, venueS
                 {/* Right Content */}
                 <div className="flex-1 relative">
                     {/* Date Badge - positioned to extend outside the image */}
-                    <div className={`absolute bg-[#ED5554] text-white h-[80px] 2xl:h-[100px] w-[345px] -top-[2rem] z-20 border-[10px] px-8 border-white rounded-full flex items-center justify-center ${side === 'right' ? 'right-[-3.5rem]' : 'left-[-3.5rem]'}`}>
+                    <div className={`absolute bg-[#ED5554] text-white h-[80px] 2xl:h-[100px] w-[300px] xl:w-[345px] -top-[2rem] z-20 border-[10px] px-4 xl:px-8 border-white rounded-full flex items-center justify-center ${side === 'right' ? 'right-[-2rem] xl:right-[-3.5rem]' : 'left-[-2rem] xl:left-[-3.5rem]'}`}>
                         <div className="flex items-center justify-center gap-2">
                             <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22.6667 2.83333V8.49999M11.3333 2.83333V8.49999M4.25 14.1667H29.75M7.08333 5.66666H26.9167C28.4815 5.66666 29.75 6.93519 29.75 8.49999V28.3333C29.75 29.8981 28.4815 31.1667 26.9167 31.1667H7.08333C5.51853 31.1667 4.25 29.8981 4.25 28.3333V8.49999C4.25 6.93519 5.51853 5.66666 7.08333 5.66666Z" stroke="#F3F3F3" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />

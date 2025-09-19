@@ -27,12 +27,7 @@ const SidebarContainer = styled.div`
   justify-content: center; /* Center the content */
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
-  transition: width 0.5s ease;
   height: auto; /* Ensure height fits the content dynamically */
-
-  &:hover {
-    width: 12rem; /* Expand to the same size on hover */
-  }
 `;
 
 const Logo = styled.div`
@@ -67,40 +62,59 @@ const Item = styled(({ exact, ...props }) => <NavLink {...props} />)`
   padding: 1rem 0; 
   cursor: pointer;
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
+  justify-content: center; /* Center the icon */
   align-items: center;
-  padding-left: 1rem; /* Add padding to the left for better spacing */
-  transition: background-color 0.3s, padding-left 0.3s ease;
+  position: relative;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgba(0, 0, 255, 0.1); 
+    background-color: rgba(11, 70, 109, 0.1); 
     border-right: 4px solid #0b466d; 
-    padding-left: 1.5rem; /* Slightly increase padding on hover */
+  }
+
+  &:hover svg {
+    color: #0b466d;
   }
 
   svg {
     width: 1.5rem; 
     height: auto;
-    margin-right: 0.75rem; /* Add margin to the right of the icon */
-    filter: invert(0%); 
-    transition: filter 0.3s ease;
-
-    &:hover {
-      filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);
-    }
+    color: #666;
+    transition: color 0.3s ease;
   }
 `;
 
-const Text = styled.span`
-  width: 0; 
-  overflow: hidden;
-  margin-left: 0; 
-  transition: all 0.3s ease;
-  white-space: nowrap; 
+const Tooltip = styled.span`
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0b466d;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-left: 0.5rem;
+  z-index: 1000;
 
-  ${SidebarContainer}:hover & {
-    width: 100%;
-    margin-left: 0.5rem; /* Adjust margin for smooth text reveal */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    border-right-color: #0b466d;
+  }
+
+  ${Item}:hover & {
+    opacity: 1;
+    visibility: visible;
   }
 `;
 
@@ -118,19 +132,19 @@ const NavBarComponent = () => {
         <SlickBar>
           <Item onClick={handleLinkClick} exact to="/">
             <FontAwesomeIcon icon={faHome} />
-            <Text>Home</Text>
+            <Tooltip>Home</Tooltip>
           </Item>
           <Item onClick={handleLinkClick} to="/events">
             <FontAwesomeIcon icon={faCalendarAlt} />
-            <Text>Events</Text>
+            <Tooltip>Events</Tooltip>
           </Item>
           <Item onClick={handleLinkClick} to="/our-team">
             <FontAwesomeIcon icon={faUsers} />
-            <Text>Team</Text>
+            <Tooltip>Team</Tooltip>
           </Item>
           <Item onClick={handleLinkClick} to="/contact-us">
             <FontAwesomeIcon icon={faPhone} />
-            <Text>Contact</Text>
+            <Tooltip>Contact</Tooltip>
           </Item>
         </SlickBar>
       </SidebarContainer>
