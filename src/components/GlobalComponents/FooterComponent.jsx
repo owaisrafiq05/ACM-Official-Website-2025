@@ -6,6 +6,7 @@ const FooterComponent = () => {
   const events = [
     { name: "Coders Cup", link: "https://coderscup.acmnuceskhi.com/" },
     { name: "SkillPrep Series", link: "https://skillprep.acmnuceskhi.com/" },
+    { name: "Tech Activities", link: "https://activities.acmnuceskhi.com/" },
   ];
 
   const developers = [

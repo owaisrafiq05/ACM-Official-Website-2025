@@ -69,34 +69,30 @@ export default function HeroSectionComponent() {
     </h3>
   </div>
 
-  {/* Second Card */}
-  <div className="bg-[#ED5554] text-white rounded-xl p-6 shadow-lg relative lg:flex-[1] flex flex-col">
-  {/* Top-right wide pop */}
+ {/* Second Card */}
+<a
+  href="/events" 
+  className="bg-[#ED5554] text-white rounded-xl p-6 shadow-lg relative lg:flex-[1] flex flex-col cursor-pointer transition-transform hover:scale-105"
+>
   <div className="absolute -top-2 right-0 w-20 h-4 bg-[#ED5554] rounded-t-xl"></div>
-
-  {/* Arrow */}
   <ArrowUpRight className="absolute top-4 right-4 h-6 w-6 text-white" />
-
-  {/* Content (heading at bottom) */}
   <h3 className="text-lg md:text-xl font-semibold mt-auto">
-    Upcoming <br/> Events
+    Upcoming <br /> Events
   </h3>
-</div>
+</a>
 
-
-  {/* Third Card */}
- <div className="bg-[#353535] text-white rounded-xl p-6 shadow-lg relative lg:flex-[1] flex flex-col">
-  {/* Top-right wide pop */}
+{/* Third Card */}
+<a
+  href="/contact-us"
+  className="bg-[#353535] text-white rounded-xl p-6 shadow-lg relative lg:flex-[1] flex flex-col cursor-pointer transition-transform hover:scale-105"
+>
   <div className="absolute -top-2 right-0 w-20 h-4 bg-[#353535] rounded-t-xl"></div>
-
-  {/* Arrow */}
   <ArrowUpRight className="absolute top-4 right-4 h-6 w-6 text-white" />
-
-  {/* Content (heading at bottom) */}
   <h3 className="text-lg md:text-xl font-semibold mt-auto">
-    Meet Our <br/> Team
+    Contact <br /> Us
   </h3>
-</div>
+</a>
+
 
 </div>
 

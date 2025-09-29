@@ -85,7 +85,7 @@ export function Events() {
         venue="Auditorium"
         venueSubtitle="Karachi Campus"
         attendees="250+"
-        link="https://skillprep.acmnuceskhi.com/"
+        link="https://activities.acmnuceskhi.com/"
       />
 
 
