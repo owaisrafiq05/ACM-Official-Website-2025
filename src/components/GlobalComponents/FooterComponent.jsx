@@ -10,7 +10,7 @@ const FooterComponent = () => {
 
   const developers = [
     { name: "Arham Alvi", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
-    { name: "Owais Rafiq", link: "https://www.linkedin.com/in/owais-rafiq-639494253/ " },
+    { name: "Owais Rafiq", link: "https://www.linkedin.com/in/owais-rafiq-639494253/" },
     { name: "Shareeq Rashid", link: "https://www.linkedin.com/in/arham-alvi-62068b1bb/" },
   ];
 
@@ -28,8 +28,8 @@ const FooterComponent = () => {
 
   const renderList = (items) =>
     items.map((item, index) => (
-      <li key={index} className="mb-4">
-        <a href={item.link} className="hover:underline text-gray-600">
+      <li key={index} className="mb-1">
+        <a href={item.link || "#"} className="hover:underline text-gray-600">
           {item.name}
         </a>
       </li>
@@ -37,57 +37,66 @@ const FooterComponent = () => {
 
   return (
     <div className="bg-gradient-to-r from-gray-100 to-gray-200">
-      <footer className="bg-repeat shadow-lg shadow-black sm:pl-20">
-        <div className="mx-auto w-full p-4 py-6 lg:py-8">
-          <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0 ml-9">
-              <a href="https://www.acmdevday.com" className="flex items-center md:flex md:justify-center">
-                <img className="mx-auto md:mx-0" src={Logo} width={"250vw"} alt="Logo" />
+      <footer className="shadow-lg shadow-black px-4 sm:px-8 ">
+        <div className="w-full py-20">
+          {/* Grid Layout for Footer */}
+          <div
+            className="
+              grid 
+              grid-cols-1 
+              sm:grid-cols-2 
+              lg:grid-cols-5 
+              gap-8 
+              text-sm md:text-base
+              text-center sm:text-left
+            "
+          >
+            {/* Logo */}
+            <div className="flex flex-col items-center sm:items-start">
+              <a href="https://www.acmdevday.com">
+                <img src={Logo} alt="Logo" className="h-14 sm:h-16 md:h-20 object-contain" />
               </a>
             </div>
-            <div className="mt-9 mr-9">
-              {/* Top Row - Events and Socials */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Our Events</h2>
-                  <ul className="text-gray-600 font-medium text-lg">
-                    {renderList(events)}
-                  </ul>
-                </div>
-                <div>
-                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Connect with Us</h2>
-                  <div className="flex flex-wrap mt-4 items-left justify-left">
-                    {socialLinks.map((social, index) => (
-                      <a key={index} href={social.link} className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl hover:text-gray-600 transition-colors">
-                        {social.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
 
-              {/* Bottom Row - Developers and Designers */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Meet the Developers</h2>
-                  <ul className="text-gray-600 font-medium text-lg">
-                    {renderList(developers)}
-                  </ul>
-                </div>
-                <div>
-                  <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">Meet the Designers</h2>
-                  <ul className="text-gray-600 font-medium text-lg">
-                    {renderList(designers)}
-                  </ul>
-                </div>
+            {/* Events */}
+            <div>
+              <h2 className="mb-2 font-bold text-[#031e2c] uppercase text-sm">Our Events</h2>
+              <ul>{renderList(events)}</ul>
+            </div>
+
+            {/* Socials */}
+            <div>
+              <h2 className="mb-2 font-bold text-[#031e2c] uppercase text-sm">Connect</h2>
+              <div className="flex justify-center sm:justify-start space-x-3">
+                {socialLinks.map((social, i) => (
+                  <a
+                    key={i}
+                    href={social.link}
+                    className="text-[#031e2c] text-lg hover:text-gray-600 transition-colors"
+                  >
+                    {social.name}
+                  </a>
+                ))}
               </div>
             </div>
+
+            {/* Developers */}
+            <div>
+              <h2 className="mb-2 font-bold text-[#031e2c] uppercase text-sm">Developers</h2>
+              <ul>{renderList(developers)}</ul>
+            </div>
+
+            {/* Designers */}
+            <div>
+              <h2 className="mb-2 font-bold text-[#031e2c] uppercase text-sm">Designers</h2>
+              <ul>{renderList(designers)}</ul>
+            </div>
           </div>
-          <div className="border border-gray-300 h-0.5 mt-8 mb-3"></div>
-          <h2 className="text-sm text-center text-gray-600">
-            © {new Date().getFullYear()}{" "}
-            ACM NUCES™
-            . All Rights Reserved.
+
+          {/* Divider */}
+          <div className="border border-gray-300 h-0.5 mt-6 mb-3"></div>
+          <h2 className="text-xs sm:text-sm text-center text-gray-600">
+            © {new Date().getFullYear()} ACM NUCES™. All Rights Reserved.
           </h2>
         </div>
       </footer>

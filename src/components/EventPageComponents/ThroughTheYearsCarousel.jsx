@@ -57,7 +57,7 @@ const positions = isMobile
 
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 2xl:px-[6rem] py-10 sm:py-12 md:py-16">
+    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 2xl:px-[6rem] py-6 sm:py-8 md:py-32">
       {/* Title */}
       <div className="text-center mb-4">
         <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0B466D] leading-tight">

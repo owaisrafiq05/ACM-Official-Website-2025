@@ -19,7 +19,7 @@ export function Events() {
   ];
 
   return (
-    <div className="mt-12 lg:pl-20 relative overflow-x-hidden">
+    <div className="mt-28 relative overflow-x-hidden">
       
       {/* SVG background */}
       <img 
@@ -29,7 +29,7 @@ export function Events() {
       />
 
       <motion.h2
-        className="font-extrabold text-[50px] lg:text-[60px] text-center text-[#0B466D] mb-6 relative"
+        className="font-extrabold text-[45px] lg:text-[60px] mb-8 sm:mb-0 text-center text-[#0B466D] relative"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -47,6 +47,7 @@ export function Events() {
         venue="FAST NUCES"
         venueSubtitle="Karachi Campus"
         attendees="5000+"
+        link="https://coderscup.acmnuceskhi.com/"
       />
   
  <img 
@@ -57,7 +58,7 @@ export function Events() {
 
       <EventCard
         side='right'
-        title="Sessions & Workshops"
+        title="Workshops"
         logo={``}
         description="Interactive sessions and workshops designed to spark creativity and foster collaboration. Join industry experts and peers to gain insights that will fuel your journey in technology and innovation."
         date="Weekly Sessions"
@@ -65,6 +66,20 @@ export function Events() {
         venue="Auditorium"
         venueSubtitle="Karachi Campus"
         attendees="250+"
+        link="https://skillprep.acmnuceskhi.com/"
+      />
+
+      <EventCard
+        side='left'
+        title="SkillPrep Series"
+        logo={``}
+        description="Level up your coding skills with SkillPrep Series — your weekly guide to mastering DSA, problem-solving, and cracking coding interviews through hands-on practice and contests."
+        date="Weekly Sessions"
+        image={Workshop}
+        venue="Auditorium"
+        venueSubtitle="Karachi Campus"
+        attendees="250+"
+        link="https://skillprep.acmnuceskhi.com/"
       />
 
       <ThroughTheYearsCarousel 

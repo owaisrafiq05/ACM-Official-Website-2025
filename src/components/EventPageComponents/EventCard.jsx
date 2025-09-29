@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Desktop Component (1024px and above)
-const EventCardDesktop = ({ title, logo, description, date, image, venue, venueSubtitle, attendees, side }) => {
+const EventCardDesktop = ({ title, logo, description, date, image, venue, venueSubtitle, attendees, side, link }) => {
     return (
         <motion.div
-            className="container mx-auto px-8 lg:px-16 2xl:px-[6rem] py-32 mb-[4rem] xl:mb-[2rem] overflow-hidden"
+            className="container mx-auto px-8 lg:px-16 2xl:px-[6rem] py-32 overflow-hidden"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -35,12 +35,13 @@ const EventCardDesktop = ({ title, logo, description, date, image, venue, venueS
                     </p>
 
                     {/* Register Button */}
-                    <button className="bg-[#0B466D] hover:bg-[#3A7A8A] text-[18px] text-white px-[2rem] py-3 rounded-full font-medium flex items-center gap-2 transition-colors duration-300 mt-[100px] shadow-[0px_4px_4px_0px_#00000040]">
-                        Register Now
-                        <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.5 13H23.5M23.5 13L13 2.5M23.5 13L13 23.5" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
+                    
+                        <button  onClick={() => window.open(link, "_blank", "noopener,noreferrer")} className="bg-[#0B466D] hover:bg-[#3A7A8A] text-[18px] text-white px-[2rem] py-3 rounded-full font-medium flex items-center gap-2 transition-colors duration-300 mt-[100px] shadow-[0px_4px_4px_0px_#00000040]">
+                            Register Now
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 13H23.5M23.5 13L13 2.5M23.5 13L13 23.5" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
                 </div>
 
                 {/* Right Content */}
@@ -95,7 +96,7 @@ const EventCardDesktop = ({ title, logo, description, date, image, venue, venueS
 };
 
 // Mobile/Tablet Component (below 1024px)
-const EventCardMobile = ({ title, logo, description, date, image, venue, venueSubtitle, attendees }) => {
+const EventCardMobile = ({ title, logo, description, date, image, venue, venueSubtitle, attendees, link }) => {
     return (
         <motion.div
             className="container mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 mb-12"
@@ -110,14 +111,14 @@ const EventCardMobile = ({ title, logo, description, date, image, venue, venueSu
                         <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-[0] text-black">
                             {title}
                         </h1>
-                        {logo && ( 
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center flex-shrink-0">
-                            <img
-                                src={logo}
-                                alt={`${title} Logo`}
-                                className="w-full h-full object-cover rounded-2xl"
-                            />
-                        </div>
+                        {logo && (
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center flex-shrink-0">
+                                <img
+                                    src={logo}
+                                    alt={`${title} Logo`}
+                                    className="w-full h-full object-cover rounded-2xl"
+                                />
+                            </div>
                         )}
                     </div>
                     <p className="font-normal text-[#0B466D] text-sm sm:text-base md:text-lg leading-relaxed tracking-[0] max-w-2xl mx-auto">
@@ -179,12 +180,13 @@ const EventCardMobile = ({ title, logo, description, date, image, venue, venueSu
 
                 {/* Register Button */}
                 <div className="flex justify-center">
-                    <button className="bg-[#0B466D] hover:bg-[#3A7A8A] text-sm sm:text-base md:text-lg text-white px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 rounded-full font-medium flex items-center gap-2 transition-colors duration-300 shadow-[0px_4px_4px_0px_#00000040]">
-                        Register Now
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.5 13H23.5M23.5 13L13 2.5M23.5 13L13 23.5" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
+
+                        <button  onClick={() => window.open(link, "_blank", "noopener,noreferrer")} className="bg-[#0B466D] hover:bg-[#3A7A8A] text-sm sm:text-base md:text-lg text-white px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 rounded-full font-medium flex items-center gap-2 transition-colors duration-300 shadow-[0px_4px_4px_0px_#00000040]">
+                            Register Now
+                            <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 13H23.5M23.5 13L13 2.5M23.5 13L13 23.5" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
                 </div>
             </div>
         </motion.div>
@@ -201,7 +203,8 @@ const EventCard = ({
     venue = "FAST NUCES",
     venueSubtitle = "Karachi Campus",
     attendees = "5000+",
-    side = "left"
+    side = "left",
+    link = "link"
 }) => {
     return (
         <>
@@ -217,6 +220,7 @@ const EventCard = ({
                     venueSubtitle={venueSubtitle}
                     attendees={attendees}
                     side={side}
+                    link={link}
                 />
             </div>
 
@@ -231,6 +235,7 @@ const EventCard = ({
                     venue={venue}
                     venueSubtitle={venueSubtitle}
                     attendees={attendees}
+                    link={link}
                 />
             </div>
         </>
