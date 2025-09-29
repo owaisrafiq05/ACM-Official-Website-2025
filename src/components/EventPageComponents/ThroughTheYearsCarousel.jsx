@@ -66,7 +66,7 @@ const positions = isMobile
       </div>
 
       {/* Navigation Arrows - Mobile Only - Below Heading */}
-      {isMobile && (
+      {/* {isMobile && (
         <div className="flex justify-end mb-[-2.5rem] px-4 md:hidden">
           <div className="flex space-x-2">
             <button
@@ -110,7 +110,7 @@ const positions = isMobile
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Carousel */}
       <div className="relative w-full flex justify-center items-center overflow-hidden h-[380px]">

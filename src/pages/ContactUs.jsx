@@ -58,7 +58,12 @@ const ContactUs = () => {
       <img
         src={BgShape}
         alt="Decorative background"
-        className="absolute top-20 left-0 w-full h-auto opacity-70 pointer-events-none max-w-none"
+        className="absolute top-20 left-0 w-full h-auto opacity-90 pointer-events-none max-w-none"
+      />
+       <img
+        src={BgShape2}
+        alt="Decorative background"
+        className="absolute top-40 left-0 w-full h-auto opacity-90 pointer-events-none max-w-none"
       />
 
       {/* Title */}
@@ -165,24 +170,13 @@ const ContactUs = () => {
               "President",
               <>
                 <Typography variant="body1" gutterBottom>
-                  <strong>Name:</strong> Hassaan Shahid
+                  <strong>Name:</strong> Neha Amir
                 </Typography>
-                <Box display="flex" alignItems="center" mb={2} className="font-poppins">
-                  <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">
-                    <a
-                      href="tel:+923112487725"
-                      style={{ color: "inherit", textDecoration: "none" }}
-                    >
-                      +92 311 248 7725
-                    </a>
-                  </Typography>
-                </Box>
                 <Box display="flex" alignItems="center" className="font-poppins">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
                   <Typography variant="body1">
                     <a
-                      href="mailto:k213177@nu.edu.pk"
+                      href="mailto:k224116@nu.edu.pk"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       k213177@nu.edu.pk
@@ -196,24 +190,13 @@ const ContactUs = () => {
               "Vice President",
               <>
                 <Typography variant="body1" gutterBottom>
-                  <strong>Name:</strong> Rahim Khan
+                  <strong>Name:</strong> Muhammad Hasnain
                 </Typography>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">
-                    <a
-                      href="tel:+923363927036"
-                      style={{ color: "inherit", textDecoration: "none" }}
-                    >
-                      +92 336 392 7036
-                    </a>
-                  </Typography>
-                </Box>
                 <Box display="flex" alignItems="center" className="font-poppins">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
                   <Typography variant="body1">
                     <a
-                      href="mailto:k214536@nu.edu.pk"
+                      href="mailto:k224718@nu.edu.pk"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       k214536@nu.edu.pk
@@ -223,27 +206,16 @@ const ContactUs = () => {
               </>
             )}
             {renderCard(
-              "Director External Affairs",
+              "General Secretary",
               <>
                 <Typography variant="body1" gutterBottom>
-                  <strong>Name:</strong> Neeraj Otwani
+                  <strong>Name:</strong> Shoaib Raza
                 </Typography>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">
-                    <a
-                      href="tel:+923222883752"
-                      style={{ color: "inherit", textDecoration: "none" }}
-                    >
-                      +92 322 288 3752
-                    </a>
-                  </Typography>
-                </Box>
                 <Box display="flex" alignItems="center" className="font-poppins">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
                   <Typography variant="body1">
                     <a
-                      href="mailto:k213223@nu.edu.pk"
+                      href="mailto:k224530@nu.edu.pk"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       k213223@nu.edu.pk
