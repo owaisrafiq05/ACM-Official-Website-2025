@@ -179,7 +179,7 @@ const ContactUs = () => {
                       href="mailto:k224116@nu.edu.pk"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      k213177@nu.edu.pk
+                      k223177@nu.edu.pk
                     </a>
                   </Typography>
                 </Box>
@@ -199,7 +199,7 @@ const ContactUs = () => {
                       href="mailto:k224718@nu.edu.pk"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      k214536@nu.edu.pk
+                      k224536@nu.edu.pk
                     </a>
                   </Typography>
                 </Box>
@@ -218,7 +218,7 @@ const ContactUs = () => {
                       href="mailto:k224530@nu.edu.pk"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      k213223@nu.edu.pk
+                      k223223@nu.edu.pk
                     </a>
                   </Typography>
                 </Box>
