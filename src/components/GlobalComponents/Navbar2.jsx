@@ -44,14 +44,14 @@ const Navbar2 = () => {
         </div> */}
 
         {/* Team Link */}
-        {/* <div className="group relative cursor-pointer">
+        <div className="group relative cursor-pointer">
           <Link to="/our-team" onClick={handleClick} className="flex h-10 w-10 items-center justify-center text-[#0B466D] hover:text-blue-500">
             <HiOutlineUsers size={28} />
           </Link>
            <span className="absolute text-[#0B466D] top-8 left-1/2 -translate-x-1/2 z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
             Team
           </span>
-        </div> */}
+        </div>
 
         {/* Contact Us Link */}
         <div className="group relative cursor-pointer">

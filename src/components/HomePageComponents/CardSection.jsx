@@ -48,6 +48,7 @@ export function CardSection() {
           <div key={index} className="w-full">
             <CardDemo
               {...card}
+              index={index}
             />
           </div>
         ))}

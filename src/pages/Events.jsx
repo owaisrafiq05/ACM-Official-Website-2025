@@ -26,7 +26,7 @@ export function Events() {
   ];
 
   return (
-    <div className="mt-28 relative overflow-x-hidden">
+    <div className="pt-28 relative overflow-x-hidden">
 
       {/* SVG background */}
       <img

@@ -1,27 +1,27 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import HassaanGatta from "../../assets/images/excom/1-Hassaan-Gatta-President.jpg";
-import RahimKhan from "../../assets/images/excom/2-Rahim-Khan-Vice-President.jpg";
-import NeerajOtwani from "../../assets/images/excom/3-Neeraj-Otwani-Secretary.jpg";
-import FawazAhmed from "../../assets/images/excom/4-Fawaz-Ahmed-General-Secretary.jpg";
-import AimalAmir from "../../assets/images/excom/5-Aimal-Amir-Treasurer.jpg";
-import GautamKumar from "../../assets/images/excom/6-Goutam-Kumar-Event-Administrator.jpg";
-import ShaheerLuqman from "../../assets/images/excom/7-Muhammad-Shaheer-Luqman-Tech-Lead.jpg";
-import UmerKhan from "../../assets/images/excom/8-Umer-Khan-Director-Marketing.jpg";
-import TehreemAliKhan from "../../assets/images/excom/9-Tehreem-Ali-Khan-Media-and-Promotions.jpg";
+import NehaAamir from "../../assets/images/excom/Neha Aamir.jpg";
+import MuhammadHasnain from "../../assets/images/excom/Muhammad Hasnain.jpg";
+import ShoaibRaza from "../../assets/images/excom/Shoaib Raza.jpg";
+import MuhammadHuzaifa from "../../assets/images/excom/Muhammad Huzaifa.jpg";
+import HunainMemon from "../../assets/images/excom/Hunain Memon.jpg";
+import AsfandyarKhanzada from "../../assets/images/excom/Asfandyar Khanzada.jpg";
+import AnsharaAsad from "../../assets/images/excom/Anshara Asad.jpg";
+import AhmedMirza from "../../assets/images/excom/Ahmed Mirza.jpg";
+import MisbahIbrahim from "../../assets/images/excom/Misbah Ibrahim.jpg";
 
 // Updated committee data with images
 const committeeData = [
-  { name: "Hassaan Gatta", designation: "President", pic: HassaanGatta },
-  { name: "Rahim Khan", designation: "Vice President", pic: RahimKhan },
-  { name: "Neeraj Otwani", designation: "Secretary", pic: NeerajOtwani },
-  { name: "Fawaz Ahmed", designation: "General Secretary", pic: FawazAhmed },
-  { name: "Aimal Amir", designation: "Treasurer", pic: AimalAmir },
-  { name: "Gautam Kumar", designation: "Event Administrator", pic: GautamKumar },
-  { name: "Muhammad Shaheer", designation: "Tech Lead", pic: ShaheerLuqman },
-  { name: "Umer Ali", designation: "Director Marketing", pic: UmerKhan },
-  { name: "Tehreem Ali", designation: "Media and Promotions", pic: TehreemAliKhan },
+  { name: "Neha Aamir", designation: "President", pic: NehaAamir },
+  { name: "Muhammad Hasnain", designation: "Vice President", pic: MuhammadHasnain },
+  { name: "Shoaib Raza", designation: "General Secretary", pic: ShoaibRaza },
+  { name: "Muhammad Huzaifa", designation: "Treasurer", pic: MuhammadHuzaifa },
+  { name: "Hunain Memon", designation: "Director Media and Promotions", pic: HunainMemon },
+  { name: "Asfandyar Khanzada", designation: "Director Technology", pic: AsfandyarKhanzada },
+  { name: "Anshara Asad", designation: "Director SOP", pic: AnsharaAsad },
+  { name: "Ahmed Mirza", designation: "Director Marketing", pic: AhmedMirza },
+  { name: "Misbah Ibrahim", designation: "Director Corporate Affairs", pic: MisbahIbrahim },
 ];
 
 // Animation variants
@@ -53,42 +53,52 @@ const headingVariants = {
 const ExecutiveCommittee = () => {
   return (
     <section className="ezy__team20 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white overflow-hidden">
-      <div className="container px-4 mx-auto sm:pl-20 ">
-        <div className="flex justify-center text-center">
-          <div className="sm:max-w-lg">
-            <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl text-[#0B466D] font-extrabold mb-2 md:mb-8"
-              variants={headingVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              Executive Committee
-            </motion.h2>
+      <div className="container px-4 mx-auto">
+        <div className="flex flex-col items-center text-center mb-8">
+          <motion.h2
+            className="text-2xl md:text-3xl lg:text-4xl text-[#0B466D] font-extrabold mb-4"
+            variants={headingVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            Executive Committee
+          </motion.h2>
+          <div className="flex items-center justify-center w-full max-w-md">
+            <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+            <div className="flex-1 h-0.5 bg-gray-400 mx-2"></div>
+            <div className="w-4 h-4 bg-red-500 rounded-full"></div>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 justify-items-center"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+        >
           {committeeData.map((member, index) => (
-            <motion.div key={index} variants={variants} whileHover={{ scale: 1.015 }} className="w-72">
-              <Card sx={{ backgroundColor: 'white', borderRadius: '16px', boxShadow: 3 }}>
-                <CardMedia
-                  component="img"
-                  height="180" // Adjusted height
-                  image={member.pic}
+            <motion.div
+              key={index}
+              variants={variants}
+              className="w-80 h-96 relative overflow-hidden rounded-3xl shadow-lg"
+            >
+              <div className="relative w-full h-full">
+                <img
+                  src={member.pic}
                   alt={member.name}
-                  sx={{ borderRadius: '16px 16px 0 0' }}
+                  className="w-full h-full object-cover"
                 />
-                <CardContent>
-                  <Typography variant="h5" sx={{ color: "#257fb4", fontWeight: 'bold' }}>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0B466D] via-[#257fb4]/80 to-transparent p-6 pt-16">
+                  <h3 className="text-white text-2xl font-bold mb-1">
                     {member.name}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: "#006984" }}>
+                  </h3>
+                  <p className="text-white/90 text-md">
                     {member.designation}
-                  </Typography>
-                </CardContent>
-              </Card>
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

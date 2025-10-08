@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function CardDemo({ name, description, bgImage, afterBgImage }) {
+export function CardDemo({ name, description, bgImage, afterBgImage, index }) {
   const backgroundStyle = {
     backgroundImage: `url(${bgImage})`,
     backgroundSize: 'cover',
@@ -13,10 +13,15 @@ export function CardDemo({ name, description, bgImage, afterBgImage }) {
     backgroundPosition: 'center',
   };
 
+  // Alternating gradient colors: red for even indices, blue for odd indices
+  const gradientClass = index % 2 === 0 
+    ? "bg-gradient-to-t from-red-600 via-red-400/80 to-transparent" 
+    : "bg-gradient-to-t from-[#0B466D] via-[#257fb4]/80 to-transparent";
+
   return (
     <div className="max-w-xs w-full mx-auto">
       <div
-        className="group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-lg hover:shadow-2xl shadow-slate-500 transition-shadow duration-500 flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800"
+        className="group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-lg hover:shadow-2xl shadow-slate-500 transition-shadow duration-500 flex flex-col justify-end border border-transparent dark:border-neutral-800"
         style={backgroundStyle}
       >
         {/* Hover Background */}
@@ -25,10 +30,10 @@ export function CardDemo({ name, description, bgImage, afterBgImage }) {
           style={hoverBackgroundStyle}
         ></div>
 
-        {/* Full-width Black Overlay Section */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 bg-black bg-opacity-50 p-4">
-          <h1 className="font-bold text-xl md:text-3xl text-gray-50">{name}</h1>
-          <p className="font-normal text-base text-gray-50">
+        {/* Gradient Overlay Section - matching Executive Committee style */}
+        <div className={`absolute bottom-0 left-0 right-0 z-20 ${gradientClass} p-6 pt-16`}>
+          <h1 className="font-bold text-xl md:text-3xl text-white">{name}</h1>
+          <p className="font-normal text-base text-white/90">
             {description}
           </p>
         </div>
